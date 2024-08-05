@@ -1,0 +1,6 @@
+@import 'variables.scss';
+footer {
+background-color: darken($color: $colorDark, $amount: 15%);
+padding: $spacer;
+color: $colorWhite;
+}
