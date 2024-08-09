@@ -1,0 +1,28 @@
+@import '../layout/variables.scss';
+
+.product {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5 * $spacer;
+    padding-block-end: $spacer;
+    border-bottom: 1px solid $colorDark;
+
+img {
+        max-width: 300px;
+    }
+
+    .tags {
+        display: flex;
+        flex-direction: row;
+        gap: 0.2 * $spacer;
+
+        .tag {
+            display: inline-block;
+            background-color: $colorDark;
+            color: $colorWhite;
+            padding-block: .2 * $spacer;
+            padding-inline: $spacer;
+            border-radius: .4 * $spacer;
+        }
+    }
+}

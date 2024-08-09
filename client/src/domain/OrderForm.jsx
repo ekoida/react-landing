@@ -1,8 +1,11 @@
 import "./OrderForm.scss";
 
-const OrderForm = () => {
+const OrderForm = ({ closeForm }) => {
   return (
     <form>
+      <button type="button" onClick={closeForm}>
+        X
+      </button>
       <label>
         <input type="text" placeholder="your name" />
       </label>
