@@ -9,11 +9,14 @@ import { useState, useEffect } from "react";
 const App = () => {
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    const productsData = getAllProducts();
+  const getProducts = () => {
+    (async () => {
+      let productsData = await getAllProducts();
+      setProducts(productsData);
+    })();
+  };
+  useEffect(getProducts, []);
 
-    setProducts(productsData);
-  }, []);
   return (
     <div className="App">
       <Header />

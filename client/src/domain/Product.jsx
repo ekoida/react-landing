@@ -7,7 +7,7 @@ const Product = ({
   title,
   subtitle,
   descriptionProduct,
-  imageProduct,
+  image,
   tags,
   price_amount,
   price_currency,
@@ -19,7 +19,7 @@ const Product = ({
         {id} - {title}
       </h2>
       <h3>{subtitle}</h3>
-      <img src={imageProduct} alt={title} />
+      <img src={`/img${image}`} alt={title} />
       <p>{descriptionProduct}</p>
       <p className="tags">
         {tags.map((tag) => (
@@ -36,7 +36,9 @@ const Product = ({
         <button onClick={() => setShowForm(!showFrom)}>
           {showFrom ? "CANCEL" : "ORDER"}
         </button>
-        {showFrom && <OrderForm closeForm={() => setShowForm(false)} />}
+        {showFrom && (
+          <OrderForm productId={id} closeForm={() => setShowForm(false)} />
+        )}
       </div>
     </article>
   );
