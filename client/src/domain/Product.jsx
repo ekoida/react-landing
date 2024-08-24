@@ -8,9 +8,7 @@ const Product = ({ id, title, image, price_amount, price_currency }) => {
   return (
     <Link to={`/product/${id}`} className="product-link">
       <article className="product">
-        <h2>
-          {id} - {title}
-        </h2>
+        <h2 className="procuct-title">{title}</h2>
 
         <img src={`/img${image}`} alt={title} />
 
@@ -19,7 +17,12 @@ const Product = ({ id, title, image, price_amount, price_currency }) => {
         </div>
 
         <div>
-          <button onClick={() => setShowForm(!showFrom)}>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              setShowForm(!showFrom);
+            }}
+          >
             {showFrom ? "CANCEL" : "ORDER"}
           </button>
           {showFrom && (

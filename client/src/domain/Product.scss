@@ -1,28 +1,40 @@
 @import '../layout/variables.scss';
 
 .product-link {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5 * $spacer;
-    padding-block-end: $spacer;
-    max-width: min-content;
+    
+    & .product {
+        height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            padding-block-end: 1em;
+            max-width: min-content;
+            justify-content: space-between;
 
-img {
-        max-width: 300px;
+    & .procuct-title {
+        text-wrap: pretty;
     }
 
-    .tags {
-        display: flex;
-        flex-direction: row;
-        gap: 0.2 * $spacer;
-
-        .tag {
-            display: inline-block;
-            background-color: $colorDark;
-            color: $colorWhite;
-            padding-block: .2 * $spacer;
-            padding-inline: $spacer;
-            border-radius: .4 * $spacer;
+     & img {
+        justify-self: start;
+            max-width: 300px;
+        }
+    
+       & .tags {
+            display: flex;
+            flex-direction: row;
+            gap: 0.2 * $spacer;
+    
+           & .tag {
+                display: inline-block;
+                background-color: $colorDark;
+                color: $colorWhite;
+                padding-block: .2 * $spacer;
+                padding-inline: $spacer;
+                border-radius: .4 * $spacer;
+            }
         }
     }
+
+
 }
