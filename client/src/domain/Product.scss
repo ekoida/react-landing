@@ -1,11 +1,11 @@
 @import '../layout/variables.scss';
 
-.product {
+.product-link {
     display: flex;
     flex-direction: column;
     gap: 0.5 * $spacer;
     padding-block-end: $spacer;
-    border-bottom: 1px solid $colorDark;
+    max-width: min-content;
 
 img {
         max-width: 300px;

@@ -1,6 +1,4 @@
 import Content from "./layout/Content";
-import Header from "./layout/Header";
-import Footer from "./layout/Footer";
 import Product from "./domain/Product";
 //HW* how to use Suspence
 import { getAllProducts } from "./api/data";
@@ -19,13 +17,11 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header />
       <Content>
         {products.map((product) => (
           <Product {...product} key={product.title} />
         ))}
       </Content>
-      <Footer />
     </div>
   );
 };

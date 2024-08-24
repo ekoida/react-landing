@@ -6,6 +6,12 @@ export const getAllProducts = async () => {
   return request.json();
 };
 
+export const getProduct = async (id) => {
+  const request = await fetch(`${HOST}/product/${id}`);
+
+  return request.json();
+};
+
 export const setOrder = async (data) => {
   const request = await fetch(`${HOST}/order`, {
     method: "POST",
@@ -17,3 +23,9 @@ export const setOrder = async (data) => {
 
   return request.json();
 };
+
+export const getOrders = async () => {
+    const request = await fetch(`${HOST}/orders`);
+
+    return request.json();
+}

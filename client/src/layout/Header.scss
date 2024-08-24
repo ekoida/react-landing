@@ -1,7 +1,27 @@
 @import 'variables.scss';
 
 header {
+    position: sticky;
+    top: 0;
     padding: $spacer;
     background-color: $colorDark;
     color: $colorWhite;
+
+    & nav {
+        & ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            a {
+                color: $colorWhite;
+            }
+            & .active {
+                 color: red;
+             }
+        }
+    }
 }

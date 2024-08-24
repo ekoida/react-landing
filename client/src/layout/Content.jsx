@@ -1,7 +1,7 @@
 import "./Content.scss";
 
 const Content = ({ children }) => {
-  return <main>{children}</main>;
+  return <main className="container">{children}</main>;
 };
 
 export default Content;
