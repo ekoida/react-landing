@@ -3,16 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Product.scss";
 
-const Product = ({
-  id,
-  title,
-  subtitle,
-  descriptionProduct,
-  image,
-  tags,
-  price_amount,
-  price_currency,
-}) => {
+const Product = ({ id, title, image, price_amount, price_currency }) => {
   const [showFrom, setShowForm] = useState(false);
   return (
     <Link to={`/product/${id}`} className="product-link">
