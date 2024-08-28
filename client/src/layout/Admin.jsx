@@ -4,6 +4,7 @@ import { adminLogin } from "../api/data";
 
 export const Admin = () => {
   const [isAdmin, setIsAdmin] = useState(false);
+
   const submit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -16,16 +17,25 @@ export const Admin = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={submit}>
-        <label>
-          <input type="text" name="user_name" />
-        </label>
-        <label>
-          <input type="password" name="password" />
-        </label>
-        <button>Login</button>
-      </form>
-    </div>
+    <>
+      <header>Admin header</header>
+      {isAdmin ? (
+        <Outlet />
+      ) : (
+        <div>
+          <form onSubmit={submit}>
+            <label>
+              <input type="text" name="user_name" />
+            </label>
+            <label>
+              <input type="password" name="password" />
+            </label>
+            <button>Login</button>
+          </form>
+        </div>
+      )}
+
+      <footer>Admin footer</footer>
+    </>
   );
 };

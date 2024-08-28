@@ -22,13 +22,19 @@ const routes = createBrowserRouter([
       },
       {
         path: "orders",
-        element: <Orders></Orders>,
+        element: <Orders />,
       },
     ],
   },
   {
     path: "/admin",
     element: <Admin />,
+    children: [
+      {
+        path: "/admin",
+        element: <App />,
+      },
+    ],
   },
 ]);
 
