@@ -5,6 +5,7 @@ import App from "./App";
 import { ProductDetails } from "./domain/ProductDetails";
 import { Layout } from "./layout/Layout";
 import { Orders } from "./domain/Orders";
+import { Admin } from "./layout/Admin";
 
 const routes = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const routes = createBrowserRouter([
         element: <Orders></Orders>,
       },
     ],
+  },
+  {
+    path: "/admin",
+    element: <Admin />,
   },
 ]);
 

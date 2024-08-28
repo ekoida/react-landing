@@ -25,7 +25,19 @@ export const setOrder = async (data) => {
 };
 
 export const getOrders = async () => {
-    const request = await fetch(`${HOST}/orders`);
+  const request = await fetch(`${HOST}/orders`);
 
-    return request.json();
-}
+  return request.json();
+};
+
+export const adminLogin = async (data) => {
+  const request = await fetch(`${HOST}/admin/login`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  return request.json();
+};

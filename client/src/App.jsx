@@ -1,8 +1,8 @@
 import Content from "./layout/Content";
 import Product from "./domain/Product";
-//HW* how to use Suspence
 import { getAllProducts } from "./api/data";
 import { useState, useEffect } from "react";
+import "./App.scss";
 
 const App = () => {
   const [products, setProducts] = useState([]);
