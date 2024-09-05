@@ -1,0 +1,20 @@
+{
+  "name": "react-landing",
+  "version": "1.0.0",
+  "description": "react based book e-shop showcase",
+  "type": "module",
+  "scripts": {
+    "start:api": "npm --prefix api/ start",
+    "start:client": "npm --prefix client/ start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekoida/react-landing.git"
+  },
+  "author": "celeno4ka@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ekoida/react-landing/issues"
+  },
+  "homepage": "https://github.com/ekoida/react-landing#readme"
+}

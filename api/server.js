@@ -15,17 +15,46 @@ const app = express();
 const allowedhost = [];
 app.use(cors("http://localhost:5173"));
 
-app.use(bodyParser.json());
-
+app.use(express.json()); // todo check if working
 const port = 3000;
 
 // user and admin related routes
 app.post("/api/admin/login", async (req, res) => {
-  const user = req.body;
+  const credendials = req.body;
   // todo create request to db and cehck if user is admin
   // and return ok if he is, or unauthorized if not
 
-  res.json({ ...user, loggedIn: true });
+  res.json({ ...credendials, loggedIn: true });
+});
+
+// user authorization routes
+
+app.post("/api/login", async (req, res) => {
+  const credentials = req.body;
+
+  // check if user exist and make him authorized
+  res.json({ credentials, loggedIn: true });
+});
+
+app.post("/api/register", async (req, res) => {
+  const userData = req.body;
+  // make some validation over user data
+  // and return error if something is not ok
+  // if ok
+  // write user data into database
+  // return user id and, maybe redirect to login page, or login him automatically
+
+  res.json({ ...userData, loggedIn: true });
+});
+
+app.delete("/api/drop-account/:id", async (req, res) => {
+  const { id } = req.params;
+
+  // check if id is not null or any other false value
+  //delete user data from database
+  // return response ok, redirect user to the main page delte all his session data form localstorage
+
+  res.json({ id, loggedIn: false });
 });
 
 // product related routes

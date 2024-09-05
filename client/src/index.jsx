@@ -6,6 +6,7 @@ import { ProductDetails } from "./domain/ProductDetails";
 import { Layout } from "./layout/Layout";
 import { Orders } from "./domain/Orders";
 import { Admin } from "./layout/Admin";
+import "./reset.css";
 
 const routes = createBrowserRouter([
   {
